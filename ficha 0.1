@@ -1,0 +1,109 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+from random import randint
+jogador = str(input("Digite o nome do jogador: "))
+personagem = str(input("Digite o nome do personagem: "))
+csocial = int(input("Digite a classe do personagem(numero): "))
+profissao = str(input("Digite a profissao do personagem: "))
+
+
+def forca_inteligencia_carisma(csocial):
+    csocial = int(csocial)
+   
+    if(csocial == 1):
+        forca=5+(randint(1,6))
+        inteligencia=5+(randint(1,6))
+        carisma=8+(randint(1,6))
+    elif(csocial == 2):
+        forca=2+(randint(1,6))
+        inteligencia=6+(randint(1,6))
+        carisma=8+(randint(1,6))
+    elif(csocial == 3):
+        forca=6+(randint(1,6))
+        inteligencia=6+(randint(1,6))
+        carisma=6+(randint(1,6))
+    elif(csocial == 4):
+        forca=3+(randint(1,6))
+        inteligencia=7+(randint(1,6))
+        carisma=6+(randint(1,6))
+    elif(csocial == 5):
+        forca=7+(randint(1,6))
+        inteligencia=7+(randint(1,6))
+        carisma=5+(randint(1,6))
+    elif(csocial == 6):
+        forca=6+(randint(1,6))
+        inteligencia=7+(randint(1,6))
+        carisma=6+(randint(1,6))
+    elif(csocial == 7):
+        forca=5+(randint(1,6))
+        inteligencia=5+(randint(1,6))
+        carisma=5+(randint(1,6))
+    elif(csocial == 8):
+        forca=2+(randint(1,6))
+        inteligencia=2+(randint(1,6))
+        carisma=6+(randint(1,6))
+    elif(csocial == 9):
+        forca=0+(randint(1,6))
+        inteligencia=0+(randint(1,6))
+        carisma=8+(randint(1,6))
+    elif(csocial == 10):
+        forca=3+(randint(1,6))
+        inteligencia=8+(randint(1,6))
+        carisma=9+(randint(1,6))
+    elif(csocial == 11):
+        forca=6+(randint(1,6))
+        inteligencia=9+(randint(1,6))
+        carisma=8+(randint(1,6))
+    elif(csocial == 12):
+        forca=6+(randint(1,6))
+        inteligencia=10+(randint(1,6))
+        carisma=6+(randint(1,6))
+    elif(csocial == 13):
+        forca=7+(randint(1,6))
+        inteligencia=8+(randint(1,6))
+        carisma=6+(randint(1,6))
+    elif(csocial == 14):
+        forca=7+(randint(1,6))
+        inteligencia=9+(randint(1,6))
+        carisma=6+(randint(1,6))
+    elif(csocial == 15):
+        forca=9+(randint(1,6))
+        inteligencia=7+(randint(1,6))
+        carisma=5+(randint(1,6))
+    elif(csocial == 16):
+        forca=8+(randint(1,6))
+        inteligencia=8+(randint(1,6))
+        carisma=6+(randint(1,6))
+    elif(csocial == 17):
+        forca=6+(randint(1,6))
+        inteligencia=5+(randint(1,6))
+        carisma=4+(randint(1,6))
+    elif(csocial == 18):
+        forca=5+(randint(1,6))
+        inteligencia=6+(randint(1,6))
+        carisma=4+(randint(1,6))
+    elif(csocial == 19):
+        forca=0+(randint(1,6))
+        inteligencia=0+(randint(1,6))
+        carisma=8+(randint(1,6))
+    elif(csocial == 20):
+        forca=4+(randint(1,6))
+        inteligencia=8+(randint(1,6))
+        carisma=8+(randint(1,6))
+    else:
+        forca=0
+        inteligencia=0
+        carisma=0
+    return ([forca,inteligencia,carisma])
+fic=forca_inteligencia_carisma(csocial)
+animo = (fic[0]+fic[2])/2
+destreza = (fic[1]+fic[2])/3
+vida = ((animo+fic[0])/2)*10
+
+
+print("_______________________________________")
+print("Jogador: %s / Personagem: %s / Classe: %s / Profissao: %s" %(jogador,personagem,csocial,profissao))
+print("Forca: %i / Inteligência: %i / Carisma: %i / Animo: %i/ Destreza: %i / Vida: %i" %(fic[0],fic[1],fic[2],animo,destreza,vida))
+print("_______________________________________")
+
+
