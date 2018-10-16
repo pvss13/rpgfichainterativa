@@ -1,13 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from random import randint
-jogador = str(input("Digite o nome do jogador: "))
-personagem = str(input("Digite o nome do personagem: "))
-csocial = int(input("Digite a classe do personagem(numero): "))
-profissao = str(input("Digite a profissao do personagem: "))
+print ("GERADOR DE FICHAS DE PERSONAGENS")
+print ("Professor Paulo Vinicius Silva de Santana")
 
 
-def forca_inteligencia_carisma(csocial):
+def forca_inteligencia_carisma():
+    jogador = str(input("Digite o nome do jogador: "))
+    personagem = str(input("Digite o nome do personagem: "))
+    csocial = int(input("Digite a classe do personagem(numero): "))
+    profissao = str(input("Digite a profissao do personagem: "))
     csocial = int(csocial)
    
     if(csocial == 1):
@@ -102,8 +104,6 @@ vida = ((animo+fic[0])/2)*10
 
 
 print("_______________________________________")
-print("Jogador: %s / Personagem: %s / Classe: %s / Profissao: %s" %(jogador,personagem,csocial,profissao))
-print("Forca: %i / Inteligência: %i / Carisma: %i / Animo: %i/ Destreza: %i / Vida: %i" %(fic[0],fic[1],fic[2],animo,destreza,vida))
+print("Jogador: %s \nPersonagem: %s \nClasse: %s \nProfissao: %s" %(jogador,personagem,csocial,profissao))
+print("Forca: %i \nInteligência: %i \nCarisma: %i \nAnimo: %i\nDestreza: %i\nVida: %i" %(fic[0],fic[1],fic[2],animo,destreza,vida))
 print("_______________________________________")
-
-
